@@ -24,7 +24,7 @@ class DistanceBased:public Transport {
 
     virtual void removeStop(string stopname);
 
-    virtual list<string> findDestinations(string ori, double fare) const;
+    virtual list<string> findDestinations(string ori, double fare) const = 0;
 };
 
 #endif

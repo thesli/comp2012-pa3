@@ -14,16 +14,16 @@ void DistanceBased::printInfo(ostream& os) const {
        printFares(os);
 }
 
-DistanceBased::DistanceBased() {
+DistanceBased::DistanceBased() : Transport() {
 
 }
 
-DistanceBased::DistanceBased(string name, int id) {
+DistanceBased::DistanceBased(string name, int id) : Transport(name,id) {
 
 }
 
 void DistanceBased::readInfo(string filename) {
-
+    // it looks like nothing you actually need to do here...
 }
 
 bool DistanceBased::searchStop(string name) const {
@@ -33,11 +33,6 @@ bool DistanceBased::searchStop(string name) const {
 void DistanceBased::removeStop(string stopname) {
 
 }
-
-list<string> DistanceBased::findDestinations(string ori, double fare) const {
-    list<string> l;
-    return l;
-};
 
 
 // Add the rest of the implementation here

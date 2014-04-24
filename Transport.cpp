@@ -7,11 +7,13 @@
 // Add your implementation below
 
 Transport::Transport() {
-
+    this->id = 0;
+    this->transportName = "";
 }
 
 Transport::Transport(string name, int id) {
-
+    this->transportName = name;
+    this->id = id;
 }
 
 Transport::~Transport() {
@@ -19,11 +21,11 @@ Transport::~Transport() {
 }
 
 void Transport::setName(string name) {
-
+    this->transportName = name;
 }
 
 void Transport::setId(int n) {
-
+    this->id = n;
 }
 
 string Transport::getName() const {
@@ -31,5 +33,5 @@ string Transport::getName() const {
 }
 
 int Transport::getId() const {
-    return 0;
+    return this->id;
 }
