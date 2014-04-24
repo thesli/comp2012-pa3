@@ -1,0 +1,11 @@
+10
+AsiaWorld-Expo,21.0
+Cathay City,21.0
+Tung Chung Cable Car Terminal,21.0
+Lantau Link Toll Plaza,18.0
+Western Harbour Crossing Toll Plaza,8.9
+Admiralty Station,5.4
+Tonnochy Road,5.4
+Causeway Bay Station,5.4
+Victoria Park,5.4
+Tin Hau Station,0.0

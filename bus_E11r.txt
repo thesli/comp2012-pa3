@@ -1,0 +1,9 @@
+8
+Tin Hau Station,21.0
+Hong Kong Central Library,21.0
+Fleming Road,21.0
+Pacific Place,21.0
+Western Harbour Crossing Toll Plaza,14.0
+Lantau Link Toll Plaza,8.0
+Cathay City,4.0
+AsiaWorld-Expo,0.0

@@ -1,0 +1,7 @@
+3
+Wong Tai Sin
+Diamond Hill Station
+Choi Hung Station
+0 4.0 4.9
+4.0 0 4.0
+4.9 4.0 0

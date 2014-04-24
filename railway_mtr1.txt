@@ -1,0 +1,13 @@
+6
+Central Station
+Admiralty Station
+Wan Chai Station
+Causeway Bay Station
+Tin Hau Station
+North Point Station
+0 4.0 4.9 4.9 6.0 6.0
+4.0 0 4.0 4.0 4.9 6.0
+4.9 4.0 0 4.0 4.0 4.9
+4.9 4.0 4.0 0 4.0 4.9
+6.0 4.9 4.0 4.0 0 4.0
+6.0 6.0 4.9 4.9 4.0 0
