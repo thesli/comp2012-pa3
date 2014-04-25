@@ -11,7 +11,7 @@ Railway::Railway() : DistanceBased(){
 }
 
 Railway::Railway(string name, int id, string filename) : DistanceBased(name,id) {
-
+    this->readInfo(filename);
 }
 
 Railway::Railway(string name, int id) : DistanceBased(name,id) {
@@ -19,7 +19,10 @@ Railway::Railway(string name, int id) : DistanceBased(name,id) {
 }
 
 Railway::Railway(const Railway &other) {
-
+    this->id = other.id;
+    this->fares = other.fares;
+    this->transportName = other.transportName;
+    this->stopNames = other.stopNames;
 }
 
 Railway::~Railway(){
@@ -27,13 +30,27 @@ Railway::~Railway(){
 }
 
 bool Railway::operator ==(const Railway &other) const {
-    return false;
+    return
+        this->id == other.id &&
+        this->fares == other.fares &&
+        this->transportName == other.transportName &&
+        this->stopNames == other.stopNames;
+
 }
 
 Railway &Railway::operator = (const Railway &other) {
-    Railway r(other.getName(),other.getId());
+    Railway r(other);
     return r;
 };
+
+bool Railway::searchStop(string name) const {
+    for(auto i = this->stopNames.begin(); i != this->stopNames.end();i++){
+        if(*i==name){
+            return true;
+        }
+    }
+    return false;
+}
 
 int Railway::searchStopIndex(string stop) const {
     for(int i = 0;i < stopNames.size();i++){
@@ -93,6 +110,7 @@ void Railway::readInfo(string filename) {
                 bufferNumberString = "";
             }
         }
+        stationFareList.push_back(atof(bufferNumberString.c_str())); //add the last number before end of line.
         this->fares.push_back(stationFareList);
         currentStation++;
     }
@@ -112,7 +130,9 @@ list<string> Railway::findDestinations(string ori, double fare) const {
     vector<double> target = this->fares[index];
     for(int i = 0;i < target.size();i++){
         if(target[i]<=fare){
-            lst.push_back(this->stopNames[i]);
+            if(this->stopNames[i]!= ori){
+                lst.push_back(this->stopNames[i]);
+            }
         }
     }
     return lst;

@@ -1,0 +1,26 @@
+# COMP2014 PA3 April 2014
+
+I don't think the iteration way of findDestination in the sample output
+
+```
+------ From "Causeway Bay Station" with fare $5 ------
+For MTR Hong Kong Line
+ --> Wan Chai Station --> Admiralty Station --> Central Station --> Tin Hau Station --> North Point Station
+```
+
+is correct. The outcome list might not be linkable like the current scenario,in which case the misleading --> is not applicable.
+
+I didn't put the list<string> in the order as the sample output,but the output data is the same.
+
+Developed in Mac using the AppCode IDE.
+
+```
+Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
+Target: x86_64-apple-darwin13.0.0
+```
+
+the flag -std=c++11 is required to use the auto identifier for(my laziness)
+
+links on github[link].
+
+[link]: http://github.com/thesliv/

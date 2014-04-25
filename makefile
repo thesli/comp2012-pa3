@@ -1,6 +1,6 @@
 CXX=g++
-CXXFLAGS=-Wall
-SRCS=Transport.cpp DistanceBased.cpp Bus.cpp Railway.cpp FlatFare.cpp CableCar.cpp main.cpp
+CXXFLAGS=-Wall -std=c++11
+SRCS=Transport.cpp DistanceBased.cpp Bus.cpp Railway.cpp FlatFare.cpp CableCar.cpp main_original.cpp
 OBJS=$(SRCS:.cpp=.o)
 LIBS=
 TARGET=pa3

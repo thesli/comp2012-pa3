@@ -1,0 +1,42 @@
+#include "Transport.h"
+#include "DistanceBased.h"
+#include "FlatFare.h"
+#include "Railway.h"
+#include "Bus.h"
+#include "CableCar.h"
+
+int main(int argc,const char** argv){
+    Railway r("hong kong airline mtr",1,"railway_mtr1.txt");
+    Bus b("Citybus E11",11,"bus_E11.txt");
+    FlatFare f("Tram",1,2.9,"flatfare_tram1.txt");
+    CableCar c("360",360,50,95,"cablecar_360.txt");
+
+    list<string> rDestLst = r.findDestinations("Causeway Bay Station", 5);
+    list<string> bDestLst = b.findDestinations("Causeway Bay Station", 5);
+    list<string> fDestLst = f.findDestinations("Causeway Bay Station", 5);
+    list<string> cDestLst = c.findDestinations("Causeway Bay Station", 5);
+
+    bool rExistA = r.searchStop("Admiralty Station");
+    bool rExistT = r.searchStop("Tin Hau Station");
+    bool bExistA = b.searchStop("Admiralty Station");
+    bool bExistT = b.searchStop("Tin Hau Station");
+    bool fExistA = f.searchStop("Admiralty Station");
+    bool fExistT = f.searchStop("Tin Hau Station");
+    bool cExistA = c.searchStop("Admiralty Station");
+    bool cExistT = c.searchStop("Tin Hau Station");
+
+    double rFareDouble = r.findFare("Admiralty Station", "Tin Hau Station");
+    double bFareDouble = b.findFare("Admiralty Station", "Tin Hau Station");
+//    double fFareDouble = f.findFare("Admiralty Station", "Tin Hau Station");
+//    double cFareDouble = c.findFare("Admiralty Station", "Tin Hau Station");
+
+    r.removeStop("Causeway Bay Station");
+    b.removeStop("Causeway Bay Station");
+    f.removeStop("Causeway Bay Station");
+    c.removeStop("Causeway Bay Station");
+
+    r.readInfo("railway_mtr2.txt");
+    Bus br("Bus E11r",11011,"bus_E11r.txt");
+
+    return 0;
+};

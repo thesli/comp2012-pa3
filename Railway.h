@@ -27,8 +27,9 @@ public:
     virtual double findFare(string ori, string des) const;
     void readInfo(string filename);
     void removeStop(string stopname);
-
     list<string> findDestinations(string ori, double fare) const;
+
+    virtual bool searchStop(string name) const override;
 };
 
 #endif

@@ -30,7 +30,7 @@ bool DistanceBased::searchStop(string name) const {
     return false;
 }
 
-void DistanceBased::removeStop(string stopname) {
+void DistanceBased::removeStop(string stopName) {
 
 }
 
