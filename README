@@ -19,8 +19,11 @@ Apple LLVM version 5.1 (clang-503.0.40) (based on LLVM 3.4svn)
 Target: x86_64-apple-darwin13.0.0
 ```
 
-the flag -std=c++11 is required to use the auto identifier for(my laziness)
+the flag -std=c++11 is required to use the auto identifier for (my laziness).
 
-links on github[link].
+source on [github](https://github.com/thesli/comp2012-pa3).
 
-[link]: http://github.com/thesliv/
+Everything ought to work.
+I didn't go to any lecture or Lab,
+but I don't really agree on not using multi-map(or map) to implement some of the class providing the linkage,
+nor some of the interface sound weired.
